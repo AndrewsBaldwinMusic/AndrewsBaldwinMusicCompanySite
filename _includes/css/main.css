@@ -1,0 +1,214 @@
+.about-instructors {
+	margin-left: 2em;
+}
+
+.about-instructors h1 {
+	border-bottom: 0.2em double black;
+}
+
+.about-top {
+	background-color: #0080C9;
+	text-align: center;
+	display: block;
+	margin: auto;
+}
+
+.about-top h1 {
+	border-bottom: 0.13em solid black;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+
+.about-top p {
+	padding-top: 1em;
+	font-size: 18px;
+	width: 50%;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.instructors {
+	margin-left: 33em;
+}
+
+.section p {
+	width: 60%;
+	margin-left: 2em;
+}
+
+/* Current Events */
+
+.clearfix {
+	clear: both;
+	margin-bottom: 2em;
+}
+
+.info {
+	margin-left: 15em;
+}
+
+.info h1 {
+	display: inline-block;
+}
+
+.text-and-link {
+	font-size: 20px;
+	border-top-color: black;
+	border-top-width: 0.3em;
+	border-top-style: solid;
+	padding-top: 1em;
+	width: 50%;
+	float: left;
+}
+
+.text-and-photo img {
+	width: 50%;
+	float: left;
+}
+
+.current-events {
+	width: 70%;
+	margin: auto;
+	display: block;
+	text-align: left;
+}
+
+.current-events-block {
+	position: relative;
+}
+
+.current-events-copy {
+	background: white;
+	top: 3em;
+	right: 6em;
+	position: absolute;
+	margin: auto;
+	display: block;
+	text-align: right;
+	border-top-style: double;
+	border-top-width: .5em;
+	border-top-color: black;
+}
+
+.current-events-item {
+	display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.full-circle {
+	background-color: red;
+	height: 13em;
+	-moz-border-radius:10em;
+	-webkit-border-radius: 10em;
+	width: 13em;
+}
+
+/* Lessons */
+
+.cell {
+	display: inline-block;
+}
+
+.cell img {
+	padding: 2em;
+	height: 25em;
+}
+
+.cell p {
+	font-size: 16px;
+}
+
+.lessons-offered {
+	text-align: center;
+}
+
+.header {
+	text-align:center;
+	margin-bottom: 1em;
+}
+
+.header-img {
+	display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image {
+	width: 27em;
+	top: 4em;
+	position: absolute;
+}
+
+.image-section {
+	position: relative;
+}
+
+
+.footer {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 3em;
+	line-height: 50%;
+	text-align: center;
+}
+
+.navigation {
+	text-align: center;
+}
+
+.navigation ul {
+	list-style: none;
+	display: inline-block;
+	padding: 0em;
+}
+
+.navigation ul li {
+	display: inline;
+	font-weight: bold;
+	padding: 2em;
+}
+
+.home-gif {
+	text-align: center;
+}
+
+.home-section {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border-top-style: double;
+	border-top-width: .5em;
+	border-top-color: black;
+}
+
+.events {
+	width: 70%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.events p {
+	font-size: 14px;
+}
+
+.events h2 {
+	border-bottom: 0.15em solid black;
+	margin-bottom: 1em;
+	width: 30%;
+}
+
+.make-up {
+	color: red;
+}
+
+
+#lesson-dates thead {
+	margin: 1em;
+}
+

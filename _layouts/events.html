@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+	<body>
+
+		<div class="container-fluid">
+
+			{% include header.html %}
+			{% include navigation.html %}
+
+			<div class="home-section events content">
+				{{ content }}
+			</div>
+	
+			{% include footer.html %}
+
+		</div>
+
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+		<!-- Bootstrap JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<!-- DataTables JS -->
+		<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
+		<!-- Main JS -->
+		<script src="js/main.js"></script>
+<!-- 
+		<script>
+			
+			$(document).ready(function(){
+			    $('#event-table').DataTable();
+			});
+
+		</script> -->
+	</body>
+</html>

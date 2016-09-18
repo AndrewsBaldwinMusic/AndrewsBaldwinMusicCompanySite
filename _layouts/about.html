@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+	<body>
+
+		<div class="container-fluid">
+
+			{% include header.html %}
+			{% include navigation.html %}
+
+			<div class="about-top">
+				<h1>About Andrews-Baldwin Music Company</h1>
+				<p>Andrews-Baldwin Music Company officially opened in 2012, but founder, Lequita Andrews-Baldwin, has been sharing her love of music long
+				   before that. The Music Company provides multiple lessons for students of all ages. The focus is to help each musician develop their
+				   gifts. Multiple instructors help teach ABMC students and provide opportinities to showcase their talents. </p>
+				<p id="slogan">"Finding True Talent, Glorifying One God."</p>
+			</div>
+
+			<div class="about-instructors">
+				<h1>The Instructors</h1>
+				{{ content }}
+			</div>
+	
+			{% include footer.html %}
+
+		</div>
+
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+		<!-- Bootstrap JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<!-- Main JS -->
+		<script src="js/main.js"></script>
+
+	</body>
+</html>
