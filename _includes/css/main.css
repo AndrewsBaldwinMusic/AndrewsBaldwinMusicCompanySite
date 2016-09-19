@@ -165,13 +165,13 @@
 .navigation ul {
 	list-style: none;
 	display: inline-block;
-	padding: 0em;
 }
 
 .navigation ul li {
 	display: inline;
 	font-weight: bold;
-	padding: 2em;
+	margin-left: 2em;
+	margin-right: 2em;
 }
 
 .home-gif {
