@@ -5,6 +5,74 @@
 	<!-- DataTables CSS -->
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
 
+	<!-- JSCalendar -->
+	<script src="https://unpkg.com/simple-jscalendar@1.4.4/source/jsCalendar.min.js" integrity="sha384-0LaRLH/U5g8eCAwewLGQRyC/O+g0kXh8P+5pWpzijxwYczD3nKETIqUyhuA8B/UB" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://unpkg.com/simple-jscalendar@1.4.4/source/jsCalendar.min.css" integrity="sha384-44GnAqZy9yUojzFPjdcUpP822DGm1ebORKY8pe6TkHuqJ038FANyfBYBpRvw8O9w" crossorigin="anonymous">
+
+	<!-- FullCalendar -->
+	<link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.1.0/main.min.css' rel='stylesheet' />
+	<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.1.0/main.min.js'></script>
+	<script>
+		function formatDate(date, showTime) {
+			var hours = date.getHours();
+			var minutes = date.getMinutes();
+			var ampm = hours >= 12 ? 'pm' : 'am';
+			hours = hours % 12;
+			hours = hours ? hours : 12
+			hours = hours < 10 ? '0'+hours : hours;
+			minutes = minutes < 10 ? '0'+minutes : minutes;
+			var strTime = hours + ':' + minutes + ' ' + ampm;
+
+			month = date.getMonth()+1
+			month = month < 10 ? '0'+month : month;
+
+			day = date.getDate()
+			day = day < 10 ? '0'+day : day;
+
+			date = month+ "/" + day + "/" + date.getFullYear()
+
+			return showTime ? date + "  " + strTime : date;
+		}
+
+		document.addEventListener('DOMContentLoaded', function() {
+			$(".dismiss").on("click", () => {
+				$(".event-modal").removeClass("event-modal-active");
+				$(".event-content").removeClass("event-content-active");
+			});
+
+			fetch('{{site.url}}/events/lessons.txt')
+	  		.then(response => response.text())
+  			.then(text => {
+					var calendarEl = document.getElementById('calendar');
+					const json = JSON.parse(text)
+
+					if (json) {
+						var calendar = new FullCalendar.Calendar(calendarEl, {
+							initialView: 'dayGridMonth',
+							events: json.events,
+							eventClick: (info) => {
+								const allDay = info.event.allDay
+								$(".event-modal").addClass("event-modal-active");
+								$(".event-content").addClass("event-content-active");
+
+								$(".event-title").text(info.event.title);
+								$(".event-start").text(formatDate(info.event.start, !allDay));
+
+								if (allDay) {
+									$(".event-end").text("This event lasts all day");
+								} else {
+									$(".event-end").text(formatDate(info.event.end, true));
+								}
+							}
+						});
+
+						calendar.render()
+					}
+				})
+		});
+
+	</script>
+
 	<!-- Main CSS -->
 	<link rel="stylesheet" href="{{ "/style.css" }}">
 
